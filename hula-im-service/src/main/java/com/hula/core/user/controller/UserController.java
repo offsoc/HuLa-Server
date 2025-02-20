@@ -47,6 +47,12 @@ public class UserController {
         return ApiResult.success();
     }
 
+    @GetMapping("/checkModifyAvatar")
+    @Operation(summary ="检查是否可以更换头像")
+    public ApiResult<Boolean> checkModifyAvatar() {
+        return ApiResult.success(userService.checkModifyAvatar(RequestHolder.get().getUid()));
+    }
+
     @PostMapping("/summary/userInfo/batch")
     @Operation(summary ="用户聚合信息-返回的代表需要刷新的")
     public ApiResult<List<SummeryInfoDTO>> getSummeryUserInfo(@Valid @RequestBody SummeryInfoReq req) {

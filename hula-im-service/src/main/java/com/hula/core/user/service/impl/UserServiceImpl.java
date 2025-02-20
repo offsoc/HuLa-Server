@@ -175,7 +175,16 @@ public class UserServiceImpl implements UserService {
 		return userDao.changeUserState(uid, userStateId) > 0;
 	}
 
-	private List<Long> getNeedSyncUidList(List<SummeryInfoReq.infoReq> reqList) {
+    @Override
+    public Boolean checkModifyAvatar(Long uid) {
+        User user = userDao.getById(uid);
+        AssertUtil.isNotEmpty(user, "未找到用户信息");
+        return Objects.isNull(user.getAvatarUpdateTime()) ||
+                DateUtils.addDays(user.getAvatarUpdateTime(), 30).getTime() <=
+                        Calendar.getInstance().getTime().getTime();
+    }
+
+    private List<Long> getNeedSyncUidList(List<SummeryInfoReq.infoReq> reqList) {
         List<Long> needSyncUidList = new ArrayList<>();
         List<Long> userModifyTime = userCache.getUserModifyTime(reqList.stream().map(SummeryInfoReq.infoReq::getUid).collect(Collectors.toList()));
         for (int i = 0; i < reqList.size(); i++) {

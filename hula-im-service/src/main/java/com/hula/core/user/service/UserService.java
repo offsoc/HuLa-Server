@@ -76,4 +76,10 @@ public interface UserService {
 	 * @return
 	 */
 	Boolean changeUserState(Long uid, Long userStateId);
+
+    /**
+     * @param uid 当前用户id
+     * @return {@link Boolean }
+     */
+    Boolean checkModifyAvatar(Long uid);
 }
