@@ -63,7 +63,7 @@
         <p6spy.version>3.9.1</p6spy.version>
         <fastjson.version>1.2.83</fastjson.version>
         <easyexcel.version>4.0.3</easyexcel.version>
-        <poi.version>5.2.5</poi.version>
+        <poi.version>5.4.0</poi.version>
         <transmittable-thread-local.version>2.12.2</transmittable-thread-local.version>
         <knife4j.version>4.5.0</knife4j.version>
         <aviator.version>5.1.4</aviator.version>
@@ -84,9 +84,9 @@
         <bce-java-sdk.version>0.10.336</bce-java-sdk.version>
         <esdk-obs-java.version>3.24.3</esdk-obs-java.version>
         <qiniu-java-sdk.version>7.15.1</qiniu-java-sdk.version>
-        <minio.version>8.5.12</minio.version>
+        <minio.version>8.6.0</minio.version>
         <javassist.version>3.25.0-GA</javassist.version>
-        <antisamy.version>1.6.7</antisamy.version>
+        <antisamy.version>1.7.5</antisamy.version>
         <caffeine.version>2.9.3</caffeine.version>
         <protostuff.version>1.7.4</protostuff.version>
         <ip2region.version>2.7.0</ip2region.version>
